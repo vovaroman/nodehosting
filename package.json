@@ -1,4 +1,5 @@
 {
+  
   "name": "nodehosting",
   "version": "1.0.0",
   "description": "",
@@ -15,5 +16,46 @@
   "bugs": {
     "url": "https://github.com/vovaroman/nodehosting/issues"
   },
-  "homepage": "https://github.com/vovaroman/nodehosting#readme"
+  "homepage": "https://github.com/vovaroman/nodehosting#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-fp": "^2.3.0"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
+    },
+    "plugins": ["fp"],
+    "rules": {
+        "semi": "error",
+        "fp/no-mutation": "error",
+        "no-param-reassign": "error",
+        "max-lines-per-function": ["warn", 20],
+        "complexity":["warn", 5],
+        "max-nested-callbacks":["warn", 2],
+        "max-depth":["warn", 3],
+        "fp/no-mutating-methods": "warn",
+        "fp/no-mutating-assign": "warn",
+        "fp/no-let": "warn",
+        "fp/no-loops": "warn",
+        "fp/no-delete": "warn",
+        "max-params":["warn",2]
+    }
+  }
 }
